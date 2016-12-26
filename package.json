@@ -1,0 +1,29 @@
+{
+  "name": "css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "help": "^3.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.2.0",
+    "gulp-sass": "^3.0.0",
+    "onchange": "^3.2.0",
+    "parallelshell": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pug": "gulp pug",
+    "sass": "gulp sass",
+    "init:compile": "parallelshell \"npm run pug\" \"npm run sass\"",
+    "serve": "browser-sync start --server --startPath \"public\" --files \"public/**/*.+(html|css|js)\"",
+    "watch:pug": "onchange \"./src/pug/**\" -- npm run pug",
+    "watch:sass": "onchange \"./src/scss/**\" -- npm run sass",
+    "watch:dev": "parallelshell \"npm run init:compile\" \"npm run serve\" \"npm run watch:pug\" \"npm run watch:sass\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,1 @@
+* body{box-sizing:border-box}h1{color:red;text-align:center}.container{background-color:rosybrown;width:80%;height:50vh;margin:0 auto;display:flex;align-items:stretch}.items:nth-child(1){flex:25}.items:nth-child(2){flex:75}.items:nth-child(odd){background-color:lightsteelblue}.items:nth-child(even){background-color:paleturquoise}
